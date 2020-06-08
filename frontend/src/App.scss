@@ -12,10 +12,6 @@ $accent: #1da17e;
   justify-content: center;
   background-color: $bgColor;
 
-  .content {
-    z-index: 2;
-  }
-
   .circle-1 {
     position: absolute;
     top: -100px;
@@ -50,27 +46,39 @@ $accent: #1da17e;
   border-radius: 10px;
 
   @media (max-width: 1024px) {
-    width: 70vw;
-    height: 80vh;
-  }
-
-  @media (max-width: 768px) {
-    width: 80vw;
-    height: 90vh;
-  }
-
-  @media (max-width: 500px) {
-    width: 100vw;
-    border-radius: 0;
+    width: 65vw;
     height: 100vh;
+    border-radius: 0;
+    border-left: 1px solid $accent;
+  }
+
+  @media (max-width: 600px) {
+    width: 100vw;
+    border: none;
   }
 }
 
 .side-bar {
-  width: calc(35% - 10px);
-  height: 100%;
+  width: 25vw;
+  height: 80vh;
   background-color: $white;
   border-radius: 10px;
+  margin-right: 10px;
+
+  @media (max-width: 1366px) {
+    width: 27vw;
+  }
+
+  @media (max-width: 1024px) {
+    width: 35vw;
+    height: 100vh;
+    margin-right: 0;
+    border-radius: 0;
+  }
+
+  @media (max-width: 600px) {
+    display: none;
+  }
 }
 
 .messages {
@@ -78,10 +86,7 @@ $accent: #1da17e;
   display: flex;
   flex-direction: column;
   align-items: center;
-  // width: 100%;
   overflow: auto;
-  // padding: 5px;
-  // align-items: center;
 }
 
 .chat-header {

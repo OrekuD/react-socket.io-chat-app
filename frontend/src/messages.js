@@ -1,5 +1,11 @@
 export const messages = [
   {
+    id: "207",
+    user: "admin",
+    timestamp: new Date().toLocaleTimeString(),
+    message: "Duis nostrud ",
+  },
+  {
     id: "1",
     user: "Nelson",
     timestamp: "23:13:46 PM",

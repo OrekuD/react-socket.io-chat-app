@@ -1,15 +1,19 @@
 const socketio = require("socket.io");
 const http = require("http");
 const express = require("express");
-
-const app = express();
-const router = express.Router();
-const server = http.createServer(app);
-const io = socketio(server);
+const router = require("./router");
 const PORT = 5000;
 
-router.get("/", (req, res) => {
-  res.send("Server");
+const app = express();
+const server = http.createServer(app);
+const io = socketio(server);
+
+io.on("connection", (socket) => {
+  console.log("We have a new connection");
+
+  socket.on("disconnect", () => {
+    console.log("User has left");
+  });
 });
 
 app.use(router);
