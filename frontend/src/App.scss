@@ -1,5 +1,6 @@
 $bgColor: purple;
 $white: #f9f9f9;
+$primary: #3740e3;
 $secondary: #e4eff3;
 $accent: #1da17e;
 
@@ -12,21 +13,13 @@ $accent: #1da17e;
   background-color: $bgColor;
 }
 
-.chat-screen {
-  width: 70vw;
-  height: 70vh;
+.chat {
+  width: 50vw;
+  height: 80vh;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-
-  .chat {
-    width: 65%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    background-color: $white;
-    border-radius: 10px;
-  }
+  flex-direction: column;
+  background-color: $white;
+  border-radius: 10px;
 }
 
 .side-bar {
@@ -37,11 +30,15 @@ $accent: #1da17e;
 }
 
 .messages {
-  height: calc(70vh - (50px + 70px));
+  height: calc(80vh - (50px + 70px));
+  width: 100%;
   display: flex;
   flex-direction: column;
-  overflow-y: scroll;
-  overflow-x: hidden;
+  align-items: center;
+  // width: 100%;
+  overflow: auto;
+  // padding: 5px;
+  // align-items: center;
 }
 
 .chat-header {
@@ -89,17 +86,61 @@ $accent: #1da17e;
 }
 
 .received-message {
-  width: 200px;
-  border-radius: 3px;
-  background-color: red;
-  margin: 5px;
+  width: fit-content;
+  padding: 3px 10px;
+  background-color: $primary;
+  margin: 10px 200px 10px 5px;
   align-self: flex-start;
+  border-radius: 15px;
+  border-top-left-radius: 0;
+  color: $white;
+
+  .username {
+    font-size: 14px;
+    color: black;
+    margin: 0;
+  }
+
+  .message {
+    margin: 0;
+    margin-top: 5px;
+  }
+}
+
+.admin-message {
+  width: fit-content;
+  padding: 3px 10px;
+  border-radius: 3px;
+  background-color: $primary;
+  align-self: center;
+  border-radius: 15px;
+  color: $white;
+  margin: 20px 0;
+
+  .username {
+    font-size: 14px;
+    color: black;
+    margin: 0;
+    text-align: center;
+  }
+
+  .message {
+    margin: 0;
+    margin-top: 5px;
+  }
 }
 
 .sent-message {
-  width: 200px;
-  border-radius: 3px;
-  background-color: blue;
-  margin: 5px;
+  width: fit-content;
+  padding: 0px 5px;
+  background-color: $secondary;
+  margin: 10px 5px 10px 200px;
   align-self: flex-end;
+  border-radius: 15px;
+  border-bottom-right-radius: 0;
+  color: $accent;
+
+  .message {
+    margin: 10px 5px;
+  }
 }

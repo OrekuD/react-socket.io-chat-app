@@ -33,9 +33,15 @@ export const messages = [
     message: "Duis nostrud",
   },
   {
+    id: "20",
+    user: "admin",
+    message: "Duis nostrud",
+  },
+  {
     id: "7",
     user: "David",
-    message: "Duis nostrud ea eiusmod nostrud",
+    message:
+      "Duis nostrud ea eiusmod nostrud Cupidatat nisi adipisicing esse minim cupidatat exercitation consectetur magna.",
   },
   {
     id: "8",
