@@ -1,7 +1,7 @@
 import React from "react";
 
 const Message = ({ message, currentUser }) => {
-  let { user, message: msg, timestamp } = message;
+  let { user, text } = message;
 
   // timestamp =
   //   timestamp.length === 11
@@ -15,7 +15,7 @@ const Message = ({ message, currentUser }) => {
   if (user === currentUser) {
     return (
       <div className="sent-message">
-        <p className="message"> {msg} </p>
+        <p className="message"> {text} </p>
         {/* <p className="timestamp"> {timestamp} </p> */}
       </div>
     );
@@ -23,7 +23,7 @@ const Message = ({ message, currentUser }) => {
     return (
       <div className="admin-message">
         <p className="username"> {user}</p>
-        <p className="message"> {msg} </p>
+        <p className="message"> {text} </p>
         {/* <p className="timestamp"> {timestamp} </p> */}
       </div>
     );
@@ -31,7 +31,7 @@ const Message = ({ message, currentUser }) => {
     return (
       <div className="received-message">
         <p className="username"> {user}</p>
-        <p className="message"> {msg} </p>
+        <p className="message"> {text} </p>
         {/* <p className="timestamp">{timestamp}</p> */}
       </div>
     );

@@ -1,7 +1,7 @@
 $bgColor: #512da8;
 $white: #f9f9f9;
 $primary: #3740e3;
-$secondary: #e4eff3;
+$secondary: #cbdde4;
 $accent: #1da17e;
 
 .container {
@@ -130,6 +130,7 @@ $accent: #1da17e;
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
   }
 }
 
@@ -139,7 +140,7 @@ $accent: #1da17e;
   background-color: $primary;
   margin: 10px 200px 10px 5px;
   align-self: flex-start;
-  border-radius: 20px;
+  border-radius: 10px;
   border-top-left-radius: 0;
   color: $white;
 
@@ -166,11 +167,10 @@ $accent: #1da17e;
 .admin-message {
   width: fit-content;
   max-width: 80%;
-  padding: 3px 10px;
-  border-radius: 3px;
+  padding: 5px 20px;
   background-color: $primary;
   align-self: center;
-  border-radius: 20px;
+  border-radius: 8px;
   color: $white;
   margin: 20px 0;
 
@@ -193,7 +193,7 @@ $accent: #1da17e;
   background-color: $secondary;
   margin: 10px 5px 10px 200px;
   align-self: flex-end;
-  border-radius: 20px;
+  border-radius: 10px;
   border-bottom-right-radius: 0;
   color: $accent;
 

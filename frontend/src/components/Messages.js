@@ -8,7 +8,7 @@ const Messages = ({ messages, currentUser }) => {
       <div className="messages">
         {messages.map((message) => (
           <Message
-            key={message.id}
+            key={Math.random().toString()}
             message={message}
             currentUser={currentUser}
           />
