@@ -8,7 +8,7 @@ const SideBar = ({ roomDetails }) => {
       <div className="members">
         {roomDetails.members
           ? roomDetails.members.map((member) => (
-              <div className="member">
+              <div key={Math.random().toString()} className="member">
                 <p> {member.name} </p>
               </div>
             ))

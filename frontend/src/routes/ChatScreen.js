@@ -11,7 +11,6 @@ import ChatHeader from "../components/ChatHeader";
 let socket;
 const ChatScreen = ({ location }) => {
   const [username, setUsername] = useState("");
-  const [room, setRoom] = useState("");
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState([]);
   const [roomDetails, setRoomDetails] = useState({});
@@ -21,7 +20,6 @@ const ChatScreen = ({ location }) => {
   useEffect(() => {
     socket = io(ENDPOINT);
     const { name, room } = queryString.parse(location.search);
-    setRoom(room);
     setUsername(name);
 
     socket.emit("join", { name, room }, () => {});
