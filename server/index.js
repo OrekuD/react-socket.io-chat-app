@@ -14,6 +14,10 @@ io.on("connection", (socket) => {
   socket.on("disconnect", () => {
     console.log("User has left");
   });
+
+  socket.on("join", ({ name, room }) => {
+    console.log(name, room);
+  });
 });
 
 app.use(router);

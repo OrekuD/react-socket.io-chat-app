@@ -60,7 +60,7 @@ export const messages = [
   {
     id: "8",
     user: "Nelson",
-    timestamp: new Date().toLocaleTimeString(),
+    timestamp: new Date().toLocaleString(),
     message:
       "Duis nostrud ea eiusmod nostrud nisi nulla aliqua eiusmod ea laboris labore. Nostrud anim deserunt excepteur incididunt.",
   },

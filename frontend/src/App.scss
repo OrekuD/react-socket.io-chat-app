@@ -118,7 +118,7 @@ $accent: #1da17e;
       background-color: transparent;
 
       &:focus {
-        border-radius: 100%;
+        outline: none;
       }
     }
   }
@@ -218,7 +218,6 @@ $accent: #1da17e;
 
 .join-container {
   width: 30vw;
-  height: 40vh;
   display: flex;
   flex-direction: column;
 
@@ -246,6 +245,11 @@ $accent: #1da17e;
     border-radius: 20px;
     border: 1px solid $secondary;
     background-color: $white;
+    padding-left: 20px;
+
+    &:focus {
+      outline: none;
+    }
   }
 
   .button {
