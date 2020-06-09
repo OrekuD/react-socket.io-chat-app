@@ -6,6 +6,7 @@ import InputToolBar from "../components/InputToolBar";
 import Messages from "../components/Messages";
 import Container from "../components/Container";
 import SideBar from "../components/SideBar";
+import ChatHeader from "../components/ChatHeader";
 
 let socket;
 const ChatScreen = ({ location }) => {
@@ -39,7 +40,6 @@ const ChatScreen = ({ location }) => {
 
   useEffect(() => {
     socket.on("roomDetails", (roomDetails) => setRoomDetails(roomDetails));
-    console.log(roomDetails);
   }, [roomDetails]);
 
   const sendMessage = (event) => {
@@ -54,6 +54,9 @@ const ChatScreen = ({ location }) => {
     <Container>
       <SideBar roomDetails={roomDetails} />
       <div className="chat">
+        <div className="mobile-only-header">
+          <ChatHeader roomDetails={roomDetails} />
+        </div>
         <Messages messages={messages} currentUser={username} />
         <InputToolBar
           message={message}

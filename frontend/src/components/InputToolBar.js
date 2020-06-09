@@ -1,17 +1,12 @@
 import React from "react";
+import { PaperPlane, SmileyFace, Pencil } from "../svg/Svgs";
 
+const color = "#1da17e";
 const InputToolBar = ({ message, setMessage, sendMessage }) => {
-  // const [text, setText] = useState("");
-
-  // const send = (event) => {
-  //   setMessage(text);
-  //   sendMessage(event);
-  //   setText("");
-  // };
-
   return (
     <div className="input-toolbar">
       <div className="input-box">
+        <Pencil size="18px" color={color} />
         <input
           value={message}
           onChange={(event) => setMessage(event.target.value)}
@@ -22,10 +17,12 @@ const InputToolBar = ({ message, setMessage, sendMessage }) => {
           }
         />
       </div>
-      <div className="icon-container" onClick={sendMessage}>
-        w
+      <div className="icon-container">
+        <SmileyFace size="20px" color={color} />
       </div>
-      <div className="icon-container"> s </div>
+      <div className="icon-container" onClick={sendMessage}>
+        <PaperPlane size="20px" color={color} />
+      </div>
     </div>
   );
 };

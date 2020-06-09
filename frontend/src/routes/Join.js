@@ -7,6 +7,13 @@ const Join = (props) => {
   const [username, setUsername] = useState("");
   const [room, setRoom] = useState("");
 
+  const refuseSubmit = (event) => {
+    if (!username || !room) {
+      event.preventDefault();
+      alert("Both fields must be filled");
+    }
+  };
+
   return (
     <Container>
       <div className="join-container">
@@ -17,7 +24,11 @@ const Join = (props) => {
         />
         <p> Room </p>
         <input value={room} onChange={(event) => setRoom(event.target.value)} />
-        <Link to={`/chat?name=${username}&room=${room}`} className="button">
+        <Link
+          onClick={refuseSubmit}
+          to={`/chat?name=${username}&room=${room}`}
+          className="button"
+        >
           <ArrowRight color="black" size="30px" />
         </Link>
       </div>

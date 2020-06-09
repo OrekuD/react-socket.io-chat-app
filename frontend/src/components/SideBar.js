@@ -1,7 +1,21 @@
 import React from "react";
+import ChatHeader from "./ChatHeader";
 
-const SideBar = (props) => {
-  return <div className="side-bar"></div>;
+const SideBar = ({ roomDetails }) => {
+  return (
+    <div className="side-bar">
+      <ChatHeader roomDetails={roomDetails} />
+      <div className="members">
+        {roomDetails.members
+          ? roomDetails.members.map((member) => (
+              <div className="member">
+                <p> {member.name} </p>
+              </div>
+            ))
+          : null}
+      </div>
+    </div>
+  );
 };
 
 export default SideBar;

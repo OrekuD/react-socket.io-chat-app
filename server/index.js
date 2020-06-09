@@ -21,16 +21,16 @@ io.on("connection", (socket) => {
       return callback(error);
     }
 
-    socket.emit("message", { user: "admin", text: "Welcome to this room" });
+    socket.emit("message", { user: "admin", text: `Welcome, ${user.name}` });
     socket.broadcast.to(user.room).emit("message", {
       user: "admin",
-      text: `${user.name} has just joined!`,
+      text: `${user.name} joined`,
     });
 
     socket.join(user.room);
     io.to(user.room).emit("roomDetails", {
       room: user.room,
-      members: getUsersInRoom(user.room),
+      members: [...getUsersInRoom(user.room)],
     });
     callback();
   });
@@ -40,7 +40,7 @@ io.on("connection", (socket) => {
     io.to(user.room).emit("message", { user: user.name, text: message });
     io.to(user.room).emit("roomDetails", {
       room: user.room,
-      members: getUsersInRoom(user.room),
+      members: [...getUsersInRoom(user.room)],
     });
     callback();
   });
@@ -49,9 +49,14 @@ io.on("connection", (socket) => {
     const user = removeUser(socket.id);
 
     if (user) {
-      io.to(user.name).emit("message", {
+      io.to(user.room).emit("message", {
         user: "admin",
-        text: `${user.name} has left the room`,
+        text: `${user.name} left`,
+      });
+
+      io.to(user.room).emit("roomDetails", {
+        room: user.room,
+        members: [...getUsersInRoom(user.room)],
       });
     }
   });
