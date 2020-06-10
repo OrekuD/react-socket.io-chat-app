@@ -3,20 +3,10 @@ import React from "react";
 const Message = ({ message, currentUser }) => {
   let { user, text } = message;
 
-  // timestamp =
-  //   timestamp.length === 11
-  //     ? timestamp.slice(0, 5) +
-  //       " " +
-  //       timestamp.slice(timestamp.length - 2, timestamp.length)
-  //     : timestamp.slice(0, 4) +
-  //       " " +
-  //       timestamp.slice(timestamp.length - 2, timestamp.length);
-
-  if (user === currentUser) {
+  if (user.toLowerCase() === currentUser.toLowerCase()) {
     return (
       <div className="sent-message">
         <p className="message"> {text} </p>
-        {/* <p className="timestamp"> {timestamp} </p> */}
       </div>
     );
   } else if (user === "admin") {
@@ -24,7 +14,6 @@ const Message = ({ message, currentUser }) => {
       <div className="admin-message">
         <p className="username"> {user}</p>
         <p className="message"> {text} </p>
-        {/* <p className="timestamp"> {timestamp} </p> */}
       </div>
     );
   } else {
@@ -32,7 +21,6 @@ const Message = ({ message, currentUser }) => {
       <div className="received-message">
         <p className="username"> {user}</p>
         <p className="message"> {text} </p>
-        {/* <p className="timestamp">{timestamp}</p> */}
       </div>
     );
   }

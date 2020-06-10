@@ -1,5 +1,5 @@
 import React from "react";
-import { PaperPlane, SmileyFace, Pencil } from "../svg/Svgs";
+import { PaperPlane, Pencil } from "../svg/Svgs";
 
 const color = "#1da17e";
 const InputToolBar = ({ message, setMessage, sendMessage }) => {
@@ -16,9 +16,6 @@ const InputToolBar = ({ message, setMessage, sendMessage }) => {
             event.key === "Enter" ? sendMessage(event) : null
           }
         />
-      </div>
-      <div className="icon-container">
-        <SmileyFace size="20px" color={color} />
       </div>
       <div className="icon-container" onClick={sendMessage}>
         <PaperPlane size="20px" color={color} />

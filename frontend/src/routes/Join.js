@@ -3,7 +3,7 @@ import { ArrowRight } from "../svg/Svgs";
 import Container from "../components/Container";
 import { Link } from "react-router-dom";
 
-const Join = (props) => {
+const Join = () => {
   const [username, setUsername] = useState("");
   const [room, setRoom] = useState("");
 

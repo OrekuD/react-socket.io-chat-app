@@ -175,14 +175,14 @@ a {
   .input-box {
     background-color: $secondary;
     height: 45px;
-    width: 80%;
+    width: 90%;
     border-radius: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
 
     @media (max-width: 640px) {
-      width: 70%;
+      width: 80%;
     }
 
     input {
