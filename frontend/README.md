@@ -1,11 +1,18 @@
-## A chat application build using react and socket.io
+## A chat application built using React and socket.io
 
 #### Supports multiple users in a single chatroom
 
-#### Fully responsive on all devices
+![Image](https://github.com/OrekuD/react-chat-app/blob/master/src/screenshots/2.jpg?raw=true)
 
-![Desktop]
+#### Fully responsive across all devices
 
-![iPad]
+###### Desktop
 
-![Mobile]
+![Desktop](https://github.com/OrekuD/react-chat-app/blob/master/src/screenshots/1.jpg?raw=true)
+![Desktop](https://github.com/OrekuD/react-chat-app/blob/master/src/screenshots/3.jpg?raw=true)
+
+###### Mobile
+
+![Mobile](https://github.com/OrekuD/react-chat-app/blob/master/src/screenshots/4.jpg?raw=true)
+![Mobile](https://github.com/OrekuD/react-chat-app/blob/master/src/screenshots/5.jpg?raw=true)
+![Mobile](https://github.com/OrekuD/react-chat-app/blob/master/src/screenshots/6.jpg?raw=true)
