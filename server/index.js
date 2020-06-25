@@ -1,5 +1,6 @@
 const socketio = require("socket.io");
 const http = require("http");
+const cors = require("cors");
 const express = require("express");
 const router = require("./router");
 const {
@@ -8,9 +9,10 @@ const {
   getUsersInRoom,
   getUser,
 } = require("./utils/users");
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 const app = express();
+app.use(cors());
 const server = http.createServer(app);
 const io = socketio(server);
 

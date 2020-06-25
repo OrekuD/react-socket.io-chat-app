@@ -26,7 +26,7 @@ const Join = () => {
         <input value={room} onChange={(event) => setRoom(event.target.value)} />
         <Link
           onClick={refuseSubmit}
-          to={`/chat?name=${username}&room=${room}`}
+          to={`/chat?name=${username}&room=${room.toLowerCase()}`}
           className="button"
         >
           <ArrowRight color="black" size="30px" />

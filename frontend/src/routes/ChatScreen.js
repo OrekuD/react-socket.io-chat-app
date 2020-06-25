@@ -17,6 +17,8 @@ const ChatScreen = ({ location }) => {
 
   const ENDPOINT = "localhost:5000";
 
+  // const ENDPOINT = "https://react-socket-io-chat-app.herokuapp.com/";
+
   useEffect(() => {
     socket = io(ENDPOINT);
     const { name, room } = queryString.parse(location.search);
