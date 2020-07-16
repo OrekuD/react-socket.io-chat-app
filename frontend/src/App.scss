@@ -10,7 +10,7 @@ a {
 
 .container {
   width: 100vw;
-  height: 100%;
+  height: calc(var(--viewportHeight, 1vh) * 100);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -208,6 +208,12 @@ a {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    border: none;
+    outline: none;
+
+    &:focus {
+      outline: none;
+    }
   }
 }
 

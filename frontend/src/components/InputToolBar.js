@@ -17,9 +17,9 @@ const InputToolBar = ({ message, setMessage, sendMessage }) => {
           }
         />
       </div>
-      <div className="icon-container" onClick={sendMessage}>
+      <button className="icon-container" onClick={sendMessage}>
         <PaperPlane size="20px" color={color} />
-      </div>
+      </button>
     </div>
   );
 };

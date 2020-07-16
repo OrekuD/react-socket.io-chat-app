@@ -15,9 +15,9 @@ const ChatScreen = ({ location }) => {
   const [messages, setMessages] = useState([]);
   const [roomDetails, setRoomDetails] = useState({});
 
-  // const ENDPOINT = "localhost:5000";
+  const ENDPOINT = "localhost:5000";
 
-  const ENDPOINT = "https://react-socket-io-chat-app.herokuapp.com/";
+  // const ENDPOINT = "https://react-socket-io-chat-app.herokuapp.com/";
 
   useEffect(() => {
     socket = io(ENDPOINT);
